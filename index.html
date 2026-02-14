@@ -158,13 +158,17 @@
                     class="group relative px-8 py-4 bg-transparent border-2 border-white text-white font-orbitron font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300">
                     <span class="relative z-10"><i class="fab fa-youtube mr-2"></i> Follow On TikTok</span>
                 </a>
-                <a href="https://store.callofdutymobile.com/en-lk/codm" target="_blank"
-                    class="group relative px-8 py-4 bg-transparent border-2 border-neon-green text-neon-green font-orbitron font-bold uppercase tracking-wider hover:bg-neon-green hover:text-black transition-all duration-300 overflow-hidden">
-                    <span class="relative z-10">CP Topup Store</span>
-                    <div
-                        class="absolute inset-0 h-full w-full bg-neon-green transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 z-0">
-                    </div>
+                <a href="#" onclick="openCPStore(event)"
+                    class="group relative inline-block px-8 py-4 bg-transparent border-2 border-neon-green text-neon-green font-bold uppercase tracking-wider overflow-hidden transition-all duration-300 hover:text-black z-10">
+
+                    <span class="relative z-20">CP Topup Store</span>
+
+                    <span
+                        class="absolute inset-0 bg-neon-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left -z-10"></span>
+
                 </a>
+
+
             </div>
         </div>
 
@@ -343,6 +347,13 @@
             } else {
                 window.open(webUrl, '_blank');
             }
+        }
+
+        // CP Store Open Function
+        function openCPStore(event) {
+            if (event) event.preventDefault();
+            const url = "https://store.callofdutymobile.com/en-lk/codm";
+            window.open(url, '_blank');
         }
     </script>
 </body>
